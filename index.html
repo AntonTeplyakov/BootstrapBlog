@@ -220,8 +220,99 @@
         </button>
       </div>
       </div>
-       
     </section>
+   <section class="contactform mt-5">
+     <div class="container">
+        <h3 class="mb-3">Contact (Your Name)</h3>
+        <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="name1" class="form-label">First Name</label>
+          <input type="text" id="name1" class="form-control" value="Mark" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="name2" class="form-label">Last Name</label>
+          <input type="text" id="name2" class="form-control" value="Otto" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="username" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input type="text" id="username" class="form-control" required>
+            <div class="invalid-feedback">
+              Choose a username
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="city" class="form-label">City</label>
+          <input type="text" id="city" class="form-control" required>
+          <div class="invalid-feedback">
+            Choose a city
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="selectarea" class="form-label">State</label>
+          <select id="selectarea" class="form-select" required>
+            <option selected disabled>Choose</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Select a valid state
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="zip" class="form-control">ZIP</label>
+          <input type="text" class="form-control" id="zip" required>
+          <div class="invalid-feedback">
+            Provide a valid zip
+          </div>
+        </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="check" required>
+          <label for="form-check-label" form="check">
+            Agreed
+          </label>
+          <div class="invalid-feedback">
+            You have to agree
+          </div>
+        </div>
+      </div>  
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit Form</button>
+  </div>
+       </form>
+     </div>
+   </section>
+
+   <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
     <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
